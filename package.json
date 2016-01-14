@@ -1,0 +1,16 @@
+{
+  "name": "abndlr",
+  "version": "1.1.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thibault H <thibaulthottou@gmail.com>",
+  "license": "ISC",
+  "preferGlobal": true,
+  "bin": {
+    "abndlr": "index.js",
+    "abundler": "index.js"
+  }
+}
