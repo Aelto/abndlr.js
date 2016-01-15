@@ -12,10 +12,10 @@ go to the folder you want to bundle then type
 $ abndlr
 ```
 # The options
-3 arguments are available, their position are not important
+3 arguments are available, their positions are not important
 * a path to the folder you want to bundle
 * the bundle file name
-* a path to the .json configuration file (todo)
+* a path to the .json configuration file
 
 ## With options
 ```bash
