@@ -5,7 +5,7 @@ const util = require('./util.js')
 // searching for files synchronously
 const finder = (path, bundle, bundleName) => {
     const files = fs.readdirSync(path)
-
+    
     files.forEach( fileName => {
         const fullPath = path + '/' + fileName
         const dir = fs.lstatSync(fullPath).isDirectory()
@@ -13,11 +13,12 @@ const finder = (path, bundle, bundleName) => {
         if (dir) return finder(fullPath, bundle, bundleName)
 
         if (util.getExtension( fileName ) === 'js' && fileName !== bundleName) {
-            const comment = `// ${fileName}\n`
+            const comment = `// ----- ${fileName}\n`
             const data = comment + fs.readFileSync(fullPath, 'utf8')
-            bundle.push(data)
+            bundle.push({fileName, data})
         }
     })
+
 }
 exports.finder = finder
 

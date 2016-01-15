@@ -1,5 +1,6 @@
 'use strict';
 const readline = require('readline')
+const fs = require('fs')
 const util = require('./util.js')
 const bundler = require('./bundler.js')
 
@@ -32,7 +33,7 @@ exports.anyArg = (info, args) => {
 
         } else if (util.getExtension( $ ) === 'json') {
 
-            info.config = fs.readFileSync(args.splice(0, 1)[0], 'utf8')
+            info.config = JSON.parse(fs.readFileSync(args.splice(0, 1)[0], 'utf8'))
         }
     }
 

@@ -10,7 +10,6 @@ const information = {
     path: '.',
     bundle: []
 }
-
 const args = process.argv.splice(2) // taking only arguments written by user, if any
 
 // no arguments were given
