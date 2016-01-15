@@ -25,3 +25,10 @@ is the same as
 ```bash
 $ abndlr config.json bundle.js ./bin 
 ```
+
+# Your json configuration file
+```json
+{
+  "order": ["file_1.js", "file_2.js", ...]
+}
+```
