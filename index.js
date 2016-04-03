@@ -22,9 +22,6 @@
     if (!config.order) config.order = []
     if (!config.ignore) config.ignore = []
 
-    console.log(config)
-
-
     // will hold the content of every .js file found inside the folder
     const bundle = []
 
