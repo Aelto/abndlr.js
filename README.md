@@ -7,28 +7,18 @@ $ npm install abndlr -g
 ```
 
 # How to use
-go to the folder you want to bundle then type
+go to the directory you want to bundle then type
 ```bash
-$ abndlr
-```
-# The options
-3 arguments are available, their positions are not important
-* a path to the folder you want to bundle
-* the bundle file name
-* a path to the .json configuration file
-
-## With options
-```bash
-$ abndlr bundle.js ./bin config.json
-```
-is the same as
-```bash
-$ abndlr config.json bundle.js ./bin 
+abndlr config.json path_to_directory bundle_path_and_name
 ```
 
 # Your json configuration file
 ```json
 {
-  "order": ["file_1.js", "file_2.js", ...]
+  "bundler": {
+    "order": ["file_1.js", "file_2.js", ...],
+    "ignore": ["file_79.js", ...]
+  }
 }
 ```
+let the arrays empty if you don't want to order or ignore any files
